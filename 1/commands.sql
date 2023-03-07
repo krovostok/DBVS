@@ -5,7 +5,11 @@ select nr, vardas, pavarde, gimimas
 from stud.skaitytojas
 where extract(month from current_date) = extract(month from gimimas);
 
-select distinct leidykla
-from stud.knyga
-where ;
+select distinct a.leidykla, b.vardas, b.pavarde
+from stud.knyga a, stud.autorius b
+
+select distinct a.leidykla
+from stud.knyga a, stud.autorius b
+where b.vardas = 'Jonas' and b.pavarde = 'Petraitis';
+
 
